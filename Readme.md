@@ -8,7 +8,7 @@ KISS stands for **Keep it simple senorita**
 
 >This is ver 3.20 released Jun 2022
 >No more updates or enhancements planned
->see live version at [chasing a rainbow](https://www.chasingarainbow.org)
+>see live version at [Capsang](https://www.capsang.com)
 
 Written in Python 3.6
 
