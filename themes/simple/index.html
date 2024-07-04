@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div class="w3-container w3-center">
+    <h1 class="w3-bar">Featured</h1>
+</div>
+
+
+{% if pageContent.currentPost != "None" %}
+
+{% include 'inc-article-details.html' %}
+
+{% endif %}
+
+<hr/>
+
+<div class="w3-container">
+
+    {% include 'inc-article-related.html' %}
+
+</div>
+
+{% endblock %}

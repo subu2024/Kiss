@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for post in pageContent %}
+
+<div class="card">
+
+    <h2 class="w3-xxxlarge">{{ post.title }}</h2>
+
+    <p class="w3-large">published {{ post.date }}</p>
+    <p class="w3-xxlarge">
+        {{ post.content }}
+    </p>
+
+    <hr />
+
+</div>
+
+{% endfor %}
+
+
+{% endblock %}

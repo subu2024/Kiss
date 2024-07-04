@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- all posts -->
+<div class="w3-row w3-center">
+
+  <div class="w3-col">
+    <i class="fa fa-tags w3-red w3-padding-small w3-round-xlarge"></i>
+    <h3>Index</h3>
+    <p><span class="w3-bar">
+        {% for post in pageContent.currentPost %}
+
+        <a href="{{ pageContent.site.url }}/{{ post.slug }}.html" class="w3-bar-item w3-button w3-round w3-hover-red">{{
+          post.title
+          }}</a>
+
+        {% endfor %}
+      </span></p>
+  </div>
+
+</div>
+
+
+
+{% endblock %}

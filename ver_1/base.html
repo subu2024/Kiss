@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Libre+Baskerville&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>KISS - Ver 1</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Add a gray background color with some padding */
+
+
+    body {
+      font-family: 'Caveat', cursive, 'Libre Baskerville', 'Shadows Into Light';
+      font-size: 36px;
+      padding: 20px;
+    }
+
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Shadows Into Light';
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-family: 'Libre Baskerville';
+    }
+
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- the heading -->
+
+  <div class="header w3-center">
+    <h1 class="w3-jumbo"> KISS</h1>
+    <h3 class="w3-xxlarge">Simple HTML blog generator in Python</h3>
+    <hr />
+  </div>
+
+
+  <div class="w3-container w3-margin w3-left-align">
+
+    {% block content %} {% endblock %}
+
+  </div>
+
+
+
+</body>
+
+
+</html>

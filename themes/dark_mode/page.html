@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+<!-- individual page -->
+
+
+<div class="w3-row-padding w3-center w3-margin-top w3-theme-d5">
+  <div class="w3-quarter">
+    &nbsp;
+  </div>
+  <div class="w3-half">
+
+    <div class="w3-card-4 w3-padding-top w3-dark-grey">
+      <h1 class="w3-bar w3-center">{{ pageContent.currentPage.title }}</h1>
+      
+      <div class="w3-left-align w3-margin-left w3-margin-right w3-xlarge" > {{ pageContent.currentPage.content }}</div>
+     
+    </div>
+
+  </div>
+  <div class="w3-quarter">
+    &nbsp;
+  </div>
+</div>
+
+{% endblock %}

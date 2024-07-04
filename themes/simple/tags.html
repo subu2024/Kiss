@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<!-- all posts -->
+
+
+<div class="w3-container w3-center">
+    
+<h1>Showing all posts for tag: {{ pageTitle }}</h1>
+
+{% for post in pageContent.currentPost %}
+
+{% include 'inc-article-list.html' %}
+
+{% endfor %}
+
+{% include 'inc-pagination.html' %}
+</div>
+
+
+{% endblock %}

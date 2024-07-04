@@ -1,0 +1,14 @@
+<div class="w3-container w3-center">
+    <div class="w3-bar w3-xxlarge">
+        {% for item in pageContent.paginate %}
+        
+        {% if item.slug == '' %}
+        <span class="w3-tag w3-red">{{ item.title }}</span>
+        {% else %}      
+        <a href="{{ pageContent.site.url }}/{{ item.slug }}" class="w3-button w3-hover-red">{{ item.title }}</a>
+        {% endif %}
+        
+        {% endfor %}
+
+    </div>
+</div>

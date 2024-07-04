@@ -1,0 +1,12 @@
+{% if pageContent.site.google_analytics != "" %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ pageContent.site.google_analytics }}"></script>
+<script>
+  window.pageContentLayer = window.pageContentLayer || [];
+  function gtag() { window.pageContentLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '{{ pageContent.site.google_analytics }}');
+</script>
+
+{% endif %}

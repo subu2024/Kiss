@@ -1,0 +1,13 @@
+
+
+<div class="w3-container w3-center">
+    <h1 class="w3-bar">{{ pageTitle }}</h1>
+</div>
+
+
+{% for post in pageContent.currentRelated %}
+
+{% include 'inc-article-list.html' %}
+
+{% endfor %}
+

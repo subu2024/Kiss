@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- all posts -->
+<div class="w3-container">
+    
+{% for post in pageContent.currentPost %}
+
+{% include 'inc-article-list.html' %}
+
+{% endfor %}
+
+</div>
+
+{% include 'inc-pagination.html' %}
+
+{% endblock %}

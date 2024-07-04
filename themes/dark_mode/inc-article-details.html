@@ -1,0 +1,44 @@
+<!-- individual post -->
+
+
+<div class="w3-row-padding w3-center w3-margin-top w3-theme-d5">
+  <div class="w3-quarter">
+    &NonBreakingSpace;
+  </div>
+  <div class="w3-half">
+
+    <div class="w3-card-4 w3-padding-top w3-dark-grey">
+
+      <div class="w3-container w3-center">
+        <h1 class="w3-bar">{{ pageContent.currentPost.title }}</h1>
+        <h3>{{ pageContent.currentPost.readingTime }} &nbsp; published {{ pageContent.currentPost.date
+          }}</h3>
+          {% include 'inc-aws-connectivity.html' %}
+      </div>
+
+      <div class="w3-left-align w3-margin-left w3-margin-right">{{ pageContent.currentPost.content }}
+        <h3><i class="fa fa-thumb-tack"></i>context/back story: {{
+          pageContent.currentPost.summary}} </h3>
+      </div>
+
+      <footer class="w3-container w3-center w3-margin-top w3-theme-d5">
+        {% set list_of_tags = pageContent.currentPost.tags.split(",") %}
+
+        <span class="w3-bar">
+          <i class="fa fa-tags w3-red w3-padding-small w3-round-xlarge"></i>
+
+          {% for tag in list_of_tags|sort %}
+
+          <a href="{{ tag }}.html" class="w3-bar-item w3-button w3-round w3-hover-red">{{ tag }}</a>
+
+          {% endfor %}
+        </span>
+      </footer>
+    </div>
+
+
+  </div>
+  <div class="w3-quarter">
+    &NonBreakingSpace;
+  </div>
+</div>

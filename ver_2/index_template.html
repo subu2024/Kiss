@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for post in pageContent %}
+
+<div class="card">
+
+    <a href="{{post.slug}}.html"><h2 class="w3-xxxlarge">{{ post.title }}</h2></a>
+
+    
+    <hr />
+
+</div>
+
+{% endfor %}
+
+
+{% endblock %}

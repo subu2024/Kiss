@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="{{ pageContent.site.description }}">
+  <meta name="keywords" content="{{ pageContent.site.keywords }}">
+  <meta name="author" content="{{ pageContent.site.contact.name }}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Arvo&family=Roboto:wght@300&&family=Caveat:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="canonical" href="{{ pageContent.site.url }}/">
+  <title>{{ pageContent.site.title }}</title>
+
+  <style>
+    body {
+
+      font-family: 'Architects Daughter', cursive;
+      font-size: 24px;
+      padding: 20px;
+    }
+
+
+    h1 {
+
+
+      font-family: 'Caveat', cursive;
+
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Caveat', cursive;
+    }
+
+    img {
+      float: center;
+      width: 600px;
+      padding: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+
+    blockquote {
+      background: grey;
+      border-left: 12px solid rgb(242, 2, 2);
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+      font-style: italic;
+      font-family: 'Caveat', cursive;
+      font-size: 26px;
+    }
+  </style>
+
+</head>
+
+{% include 'inc-google-analytics.html' %}
+
+<body>
+
+  <!-- overall container-->
+  <div class="w3-container w3-padding-xlarge w3-center w3-mobile w3-theme">
+
+    <!-- Site-->
+    <div class="w3-row">
+      <div class="w3-panel w3-bottombar w3-border-red w3-center">
+        <h1 class="w3-xxxlarge">{{ pageContent.site.title }}</h1>
+        <h3 class="w3-xlarge">{{ pageContent.site.description }}</h3>
+      </div>
+    </div>
+
+    <!-- Navigation-->
+    <div class="w3-container w3-black w3-center w3-padding-xlarge ">
+      {% for item in pageContent.menu %}
+      <a href="{{ pageContent.site.url }}/{{ item.slug }}" class="w3-bar-item w3-button w3-mobile w3-hover-red">{{
+        item.title }}</a> &nbsp;
+      {% endfor %}
+      </span>
+    </div>
+
+    <!-- Main Content-->
+    <div class="w3-container w3-bottombar w3-border-red">
+
+      {% block content %} {% endblock %}
+
+    </div>
+
+    <!-- Secondary Navigation-->
+
+    <div class="w3-row w3-center">
+      <div class="w3-col">
+        <i class="fa fa-tags w3-red w3-padding-small w3-round-xlarge"></i>
+        <h3>Tags</h3>
+        <p><span class="w3-bar">
+            {% for item in pageContent.tags %}
+
+            <a href="{{ pageContent.site.url }}/{{ item.slug }}" class="w3-bar-item w3-button w3-round w3-hover-red">{{
+              item.title }}</a>
+
+            {% endfor %}
+          </span></p>
+      </div>
+
+      <div class="w3-col">
+        <i class="fa fa-twitter w3-red w3-padding-small w3-round-xlarge"></i>
+        <h3>Follow Me</h3>
+        <p><span class="w3-bar">
+            <a href="https://twitter.com/{{ pageContent.site.contact.twitter }}"
+              class="w3-bar-item w3-button w3-round w3-hover-red">twitter..</a>
+          </span></p>
+      </div>
+    </div>
+
+    <!-- Footer-->
+
+    <footer class="w3-container w3-center">
+      <p>
+        {{ pageContent.site.copyright }} </h3>&nbsp; &nbsp; <i
+          class="fa fa-envelope-o w3-red w3-padding-small w3-round-xlarge"></i><a
+          href="mailto:{{ pageContent.site.contact.email }}?subject=Mail from our Website">send comments and
+          questions to {{
+          pageContent.site.contact.name }}</a> &nbsp; &nbsp; version {{ pageContent.site.ver }} &nbsp; last
+        updated: {{
+        pageContent.site.published }} &nbsp; total posts: {{
+        pageContent.total_posts }}
+      </p>
+    </footer>
+
+
+  </div>
+
+</body>
+
+
+
+
+
+
+</html>
